@@ -1,0 +1,65 @@
+* {
+	font-family: Garamond, "Courier New", Arial;
+}
+
+body {
+	background-color: #B3B1B1;
+}
+
+header {
+	background-color: blue;
+	
+	}
+
+nav ui li {
+	display: inline;
+}
+
+footer {
+	
+}
+
+/*for responsive menu*/
+#icon{display:none;}
+@media screen and (max-width:800px){
+nav ul li{display:block;} /*make a menu items vertical*/
+#icon{display: block;} /* unhide menu icon */
+nav ul{display:none;} /*hide the menu item list*/
+}
+
+#menuList.menuShow{
+	display: block;
+}
+
+/* Below are CSS for the Link to look like button */
+a:link, a:visited {
+	background-color: white;
+	color: black;
+	border: 0.125em solid green;
+	padding: 0.625em 1.25em;
+	margin-left: 0.938em;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+}
+
+a:hover, a:active {
+	background-color: blue;
+	color: white;
+}
+
+/*  VV  All below are responsive CSS  VV */
+/* Mobile */
+@media screen and (max-width:540px) {
+
+}
+
+/* Tablet */
+@media screen and (min-width:541px) and (max-width:800px) {
+
+}
+
+/* Desktop */
+@media screen and (min-width:801px) {
+
+}
