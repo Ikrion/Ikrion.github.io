@@ -13,6 +13,9 @@ function hideall(){ //function to hide all pages
 	for(let onesection of allsection){ //go through all subtopic pages
 		onesection.style.display="none"; //hide it
 	}
+	for(let onecomponent of allcomponent){ //go through all the components
+		onecomponent.style.display="none"; //hide it
+	}
 }
 
 function show(pgno){ //function to show selected page no
@@ -43,7 +46,7 @@ section3btn.addEventListener("click", function () {
 	show(3);
 });
 
-/*for hamMenu */
+/*for responsive menu */
 const hamBtn=document.querySelector("#icon");
 hamBtn.addEventListener("click",toggleMenus);
 const menuItemsList=document.querySelector("nav ul");
@@ -52,13 +55,9 @@ function toggleMenus(){ /*open and close menu*/
 }
 
 /* For image description */
-
-
-
-
 function showDes(str){
 	for(let onecomponent of allcomponent){ //go through all the components
-		onecomponent.style.display="none"; //hide it
+		onecomponent.style.display="none"; //and hide them
 	}
 	switch(str){
 		case 'boots':

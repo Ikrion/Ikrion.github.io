@@ -28,7 +28,7 @@ nav li {
 	border: none;
     text-align: center;
     padding: 1em 1.2em;
-	border-right: 10px;
+	border-right: 0.625em;
     text-decoration: underline;
 }
 
@@ -40,6 +40,7 @@ nav li:hover {
 		background: #ddd;
 	}
 
+/* make the button clear. Only display the text */
 Button {
 	text-decoration-line: underline;
 	font-weight: bold;
@@ -53,6 +54,22 @@ body {
 	overflow-x: hidden;
 }
 
+/* Alternate color */
+.containerTop {
+	background-color: #94818c;
+	overflow: hidden;
+	color: white;
+	padding-left: 2em;
+}
+
+.containerBottom {
+	background-color: #7ecced;
+	overflow: hidden;
+	text-align: right;
+	padding-right: 2em;
+}
+
+/* Contain iframe to make it more responsive */
 .video-container {
   position: relative;
   padding-bottom: 56.25%;
@@ -73,15 +90,12 @@ footer {
 	background-color: rgb(167, 75, 99);
 }
 
-/*All below are for the timeline */
-
-
-
 /* Slideshow container */
 .slideshow-container {
-  max-width: 1000px;
+  max-width: 25em;
   position: relative;
   margin: auto;
+  padding-top: 1em;
 }
 
 /* Hide the images by default */
@@ -95,20 +109,20 @@ footer {
   position: absolute;
   top: 50%;
   width: auto;
-  margin-top: -22px;
-  padding: 16px;
+  margin-top: -1.375em;
+  padding: 1em;
   color: white;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 1.125em;
   transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
+  border-radius: 0 0.1875em 0.1875em 0;
   user-select: none;
 }
 
 /* Position the "next button" to the right */
 .next {
   right: 0;
-  border-radius: 3px 0 0 3px;
+  border-radius: 0.1875em 0 0 0.1875em;
 }
 
 /* On hover, add a black background color with a little bit see-through */
@@ -118,20 +132,21 @@ footer {
 
 /* Caption text */
 .text {
-  color: #f2f2f2;
-  font-size: 15px;
-  padding: 8px 12px;
+  color: #e8cd1e;
+  font-size: 0.9375em;
+  padding: 0.5em 0.75em;
   position: absolute;
-  bottom: 8px;
+  bottom: 0.5em;
   width: 100%;
   text-align: center;
+  word-wrap: break-word;
 }
 
 /* Number text (1/3 etc) */
 .numbertext {
   color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
+  font-size: 0.75em;
+  padding: 0.5em 0.75em;
   position: absolute;
   top: 0;
 }
@@ -139,9 +154,9 @@ footer {
 /* The dots/bullets/indicators */
 .dot {
   cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
+  height: 0.9375em;
+  width: 0.9375em;
+  margin: 0 0.125em;
   background-color: #bbb;
   border-radius: 50%;
   display: inline-block;
@@ -203,7 +218,7 @@ footer {
 	text-align: center;
 }
 
-#skateImg {
+#skateImg, #qrCode {
 	object-fit: cover;
 	margin-left: auto;
 	margin-right: auto;
@@ -211,13 +226,20 @@ footer {
 	height: auto;
 }
 
-#softBoots {
-	display: none;
+.components {
+	background-color: #555;
+	color: #fff;
+	float: right;
+	width: 31.25em;
+	word-wrap: break-word;
+	margin-right: 10%;
 }
 
-#cuff {
-	display: none;
+/* show pointer when mouse over the selectable area in the image */
+area {
+	cursor: pointer;
 }
+
 
 /* For menu nav */
 #icon{display:none;}
@@ -229,7 +251,7 @@ footer {
 }
 
 /* Tablet responsive CSS */
-@media screen and(max-width:800px) {
+@media only screen and (max-width: 800px) {
 	header {text-align: center; padding-right: 0%; text-decoration: underline;}
 	nav ul li{display:block; margin-top:0.5em;} /*make a menu items vertical*/
 	#icon{display: block; font-size: 1.1em; overflow: hidden; text-align: center; padding:0.5em; width: 100%} /* unhide menu icon */
