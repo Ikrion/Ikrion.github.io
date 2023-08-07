@@ -1,65 +1,237 @@
 * {
 	font-family: Garamond, "Courier New", Arial;
 }
+hr {border-color: black;}
+
+header {
+	overflow: hidden;
+	background-color: rgb(167, 75, 99);
+	text-align:right;
+	padding-right: 2em;
+	}
+	
+/* The navigation bar */
+nav {
+	font-size: 1em;
+	text-align:right;
+    overflow: hidden;
+    background-color: rgb(167, 75, 99);
+    position: sticky; /* Set the navbar to sticky so that it scroll together */
+    top: 0%; /* Position the navbar at the top of the page */
+    width: 100%; /* Full width */
+}
+
+/* Links inside the navbar */
+nav li {
+    display: inline;
+    color: #f2f2f2;
+	border: none;
+    text-align: center;
+    padding: 1em 1.2em;
+	border-right: 10px;
+    text-decoration: underline;
+}
+
+/* Change background on mouse-over */
+nav li:hover {
+    background: #ddd;
+}
+#icon:hover {
+		background: #ddd;
+	}
+
+Button {
+	text-decoration-line: underline;
+	font-weight: bold;
+	font-size: 1em;
+	background-color: transparent;
+	border: none;
+}
 
 body {
 	background-color: #B3B1B1;
+	overflow-x: hidden;
 }
 
-header {
-	background-color: blue;
-	
-	}
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  width: 100%;
+}
 
-nav ui li {
-	display: inline;
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 footer {
-	
+	text-align:center;
+	background-color: rgb(167, 75, 99);
 }
 
-/*for responsive menu*/
-#icon{display:none;}
-@media screen and (max-width:800px){
-nav ul li{display:block;} /*make a menu items vertical*/
-#icon{display: block;} /* unhide menu icon */
-nav ul{display:none;} /*hide the menu item list*/
+/*All below are for the timeline */
+
+
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
 }
 
-#menuList.menuShow{
-	display: block;
+/* Hide the images by default */
+.mySlides {
+  display: none;
 }
 
-/* Below are CSS for the Link to look like button */
-a:link, a:visited {
-	background-color: white;
-	color: black;
-	border: 0.125em solid green;
-	padding: 0.625em 1.25em;
-	margin-left: 0.938em;
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+
+#section2 {
+	flex-wrap: wrap;
+	flex-direction: row;
+}
+
+/* section 2 section*/
+#urban, #freestyle, #aggressive, #figure{ display: flex; flex-wrap: wrap; flex-direction: row; flex-basis: 100%; justify-content: center;}
+
+/* title */
+#urban h3, #section2 h2, #freestyle h3, #aggressive h3, #figure h3{ flex-basis: 100%; text-align:center;}
+
+#freestyle div {flex-basis: 40%;}
+
+/* content */
+#urban p, #freestyle p, #aggressive p, #figure p{
+	border-style: solid;
+	font-size:1.4em;
+	flex-basis: 40%;
+}
+
+#urban iframe, #figure iframe{
+	margin:0.3125em;
+	flex-basis:30%;
+	width: auto;
+	height: 100%;
+}
+
+#freestyle img, #aggressive img{
+	object-fit: cover;
+	margin:0.3125em;
+	width: 30%;
+	height: auto;
+}
+
+/* Under section 3 */
+#section3 {
 	text-align: center;
-	text-decoration: none;
-	display: inline-block;
 }
 
-a:hover, a:active {
-	background-color: blue;
-	color: white;
+#skateImg {
+	object-fit: cover;
+	margin-left: auto;
+	margin-right: auto;
+	width: 30%;
+	height: auto;
 }
 
-/*  VV  All below are responsive CSS  VV */
-/* Mobile */
-@media screen and (max-width:540px) {
-
+#softBoots {
+	display: none;
 }
 
-/* Tablet */
-@media screen and (min-width:541px) and (max-width:800px) {
-
+#cuff {
+	display: none;
 }
 
-/* Desktop */
-@media screen and (min-width:801px) {
+/* For menu nav */
+#icon{display:none;}
 
+
+#menuList.menuShow{ /* for using add/remove class on menulist */
+	display: block;
+	padding: 0.3em 1em;
+}
+
+/* Tablet responsive CSS */
+@media screen and(max-width:800px) {
+	header {text-align: center; padding-right: 0%; text-decoration: underline;}
+	nav ul li{display:block; margin-top:0.5em;} /*make a menu items vertical*/
+	#icon{display: block; font-size: 1.1em; overflow: hidden; text-align: center; padding:0.5em; width: 100%} /* unhide menu icon */
+	nav ul{display:none;} /*hide the menu item list*/
 }
