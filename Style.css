@@ -1,16 +1,30 @@
 * {
 	font-family: Garamond, "Courier New", Arial;
 }
-
+/*
 body {
 	background-color: #B3B1B1;
+}
+*/
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background-color: #00DBDE;
+    background-image: linear-gradient(to top, #48c6ef 0%, #6f86d6 100%);
+    background-attachment: fixed;
+    background-size: 100% auto;
+    background-repeat: no-repeat; /*Added to be safe*/
+    min-height: 100vh;
 }
 
 header {
 	text-align: right;
-	background: #4069E0;
+	/*background: #4069E0;*/
 	width: 100%;
-	border: 0.125em solid;
+	/*border: 0.125em solid;*/
+	/*position: fixed;
+	z-index: 1;  Ensure it stays on top */
 	}
 
 header > h1 {
@@ -18,40 +32,43 @@ header > h1 {
 }
 
 nav {
-	background-color: grey;
+	/*background-color: grey;*/
 	text-align: center;
 	padding: 1em;
 	font-size: 1.25em;
-	border-top: 0.125em solid;
+	/*border-top: 0.125em solid;*/
 }
 
 h3 {
 	display: inline; /* Set inline to display with text in AboutMe */
 }
-
-img, figure {  /* set the image in Education */
+/*
+img, figure {   set the image in Education *
 	margin:0px;
 	width: 100%;
 	height: auto;
-}
+}*/
 
 footer {
-	background-color: #9D3E2A;
-	color: white;
+	/*background-color: #9D3E2A;
+	color: white;*/
 	text-align: center;
 	width:100%;
-	border: 0.125em solid;
+	/*border: 0.125em solid;*/
 }
 
 .Content {
 	display:flex;
-	width: 100%;
-	background-color:white;
+	width: 75%;
+	/*background-color:white;*/
 	margin-top: 1.25em;
 	margin-bottom: 1.25em;
+	margin-left: auto; /* add this line */
+    margin-right: auto;/* add this line */
 	justify-content: center;
-	border: 0.125em solid;
+	/*border: 0.125em solid;*/
 	flex-wrap: wrap;
+	/*padding-top: 100px; /* Add padding to prevent content from being hidden*/
 }
 
 .galley {
@@ -72,6 +89,42 @@ footer {
 	padding-right: 1em;
 	padding-left: 1em;
 	width: 100%;	
+}
+
+.skillicon-container {
+	display: inline-flex;
+    align-items: center;
+    overflow: hidden; /* Important for hiding the text */
+    transition: width 0.3s ease; /* Smooth animation */
+    white-space: nowrap; /* Prevent text wrapping */
+	border: 1px solid #ccc; /*Optional border for visual */
+	padding: 10px; /* Optional padding */
+	margin-right: 10px;
+}
+
+.skillicon-container img {
+    height: 80px; /* Adjust as needed */
+    width: 80px; /* Adjust as needed */
+    margin-right: 5px; /* Space between icon and text */
+}
+
+.skillicon-container span {
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s ease;
+	font-size: 1.2em; /* Increase text size */
+}
+
+.skillicon-container:hover {
+    width: auto; /* Extend to fit content */
+}
+
+.skillicon-container:hover span {
+    opacity: 1; /* Show text on hover */
+}
+
+/* Initial width of Icon Container */
+.skillicon-container{
+    width: 80px;
 }
 
 
