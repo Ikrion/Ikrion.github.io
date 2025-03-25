@@ -1,11 +1,7 @@
 * {
-	font-family: Garamond, "Courier New", Arial;
+    font-family: Garamond, "Courier New", Arial;
 }
-/*
-body {
-	background-color: #B3B1B1;
-}
-*/
+
 body {
     margin: 0;
     padding: 0;
@@ -14,185 +10,214 @@ body {
     background-image: linear-gradient(to top, #48c6ef 0%, #6f86d6 100%);
     background-attachment: fixed;
     background-size: 100% auto;
-    background-repeat: no-repeat; /*Added to be safe*/
+    background-repeat: no-repeat;
     min-height: 100vh;
 }
 
 header {
-	text-align: right;
-	/*background: #4069E0;*/
-	width: 100%;
-	/*border: 0.125em solid;*/
-	/*position: fixed;
-	z-index: 1;  Ensure it stays on top */
-	}
+    text-align: right;
+    width: 100%;
+}
 
 header > h1 {
-	padding-right: 1em;
+    padding-right: 1em;
 }
 
 nav {
-	/*background-color: grey;*/
-	text-align: center;
-	padding: 1em;
-	font-size: 1.25em;
-	/*border-top: 0.125em solid;*/
+    text-align: center;
+    padding: 1em;
+    font-size: 1.25em;
 }
 
 h3 {
-	display: inline; /* Set inline to display with text in AboutMe */
+    display: inline;
 }
-/*
-img, figure {   set the image in Education *
-	margin:0px;
-	width: 100%;
-	height: auto;
-}*/
 
 footer {
-	/*background-color: #9D3E2A;
-	color: white;*/
-	text-align: center;
-	width:100%;
-	/*border: 0.125em solid;*/
+    text-align: center;
+    width: 100%;
 }
 
 .Content {
-	display:flex;
-	width: 75%;
-	/*background-color:white;*/
-	margin-top: 1.25em;
-	margin-bottom: 1.25em;
-	margin-left: auto; /* add this line */
-    margin-right: auto;/* add this line */
-	justify-content: center;
-	/*border: 0.125em solid;*/
-	flex-wrap: wrap;
-	/*padding-top: 100px; /* Add padding to prevent content from being hidden*/
+    display: flex;
+    width: 90%; /* Adjusted for better mobile view */
+    margin: 1.25em auto; /* Simplified margin for centering */
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .galley {
-	padding: 2%;
-	margin: 1%;
-	border: 0.125em dotted;
-	max-width: 14em;
+    padding: 2%;
+    margin: 1%;
+    border: 0.125em dotted;
+    max-width: 14em;
 }
 
 .ContentTitle {
-	flex-basis:100%;
-	text-align:center;
-	width:100%;
+    flex-basis: 100%;
+    text-align: center;
+    width: 100%;
 }
 
-.ContentBody { /* Content in AboutMe */
-	margin-bottom: 0.75em;
-	padding-right: 1em;
-	padding-left: 1em;
-	width: 100%;	
+.ContentBody {
+    margin-bottom: 0.75em;
+    padding: 0 1em; /* Simplified padding */
+    width: 100%;
 }
 
 .skillicon-container {
-	display: inline-flex;
+    display: inline-flex;
     align-items: center;
-    overflow: hidden; /* Important for hiding the text */
-    transition: width 0.3s ease; /* Smooth animation */
-    white-space: nowrap; /* Prevent text wrapping */
-	border: 1px solid #ccc; /*Optional border for visual */
-	padding: 10px; /* Optional padding */
-	margin-right: 10px;
+    overflow: hidden;
+    transition: width 0.3s ease;
+    white-space: nowrap;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-right: 10px;
 }
 
 .skillicon-container img {
-    height: 80px; /* Adjust as needed */
-    width: 80px; /* Adjust as needed */
-    margin-right: 5px; /* Space between icon and text */
+    height: 80px;
+    width: 80px;
+    margin-right: 5px;
 }
 
 .skillicon-container span {
-    opacity: 0; /* Initially hidden */
+    opacity: 0;
     transition: opacity 0.3s ease;
-	font-size: 1.2em; /* Increase text size */
+    font-size: 1.2em;
 }
 
 .skillicon-container:hover {
-    width: auto; /* Extend to fit content */
+    width: auto;
 }
 
 .skillicon-container:hover span {
-    opacity: 1; /* Show text on hover */
+    opacity: 1;
 }
 
-/* Initial width of Icon Container */
-.skillicon-container{
+.skillicon-container {
     width: 80px;
 }
 
-
-
-/* Below are CSS for the Link to look like button */
 a:link, a:visited {
-	background-color: white;
-	color: black;
-	border: 0.125em solid green;
-	padding: 0.625em 1.25em;
-	margin-left: 0.938em;
-	text-align: center;
-	text-decoration: none;
-	display: inline-block;
+    background-color: white;
+    color: black;
+    border: 0.125em solid green;
+    padding: 0.625em 1.25em;
+    margin-left: 0.938em;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
 }
 
 a:hover, a:active {
-	background-color: blue;
-	color: white;
+    background-color: blue;
+    color: white;
 }
 
-/* VV  All below are CSS link to ID  VV */
-
-#hobby1 { /* for the hobby img in AboutMe */
-	width: auto;
-	height: 10em;
+#hobby1 {
+    width: auto;
+    height: 10em;
 }
 
-#IntroText {  /* content text in index */
-	font-size: 1.2em;
+#IntroText {
+    font-size: 1.2em;
 }
 
-#galley1, #galley2, #galley3, #galley4 {  /* default value for the galley width */
-	flex-basis: 25%;
+#galley1, #galley2, #galley3, #galley4 {
+    flex-basis: 25%;
 }
 
-/*  VV  All below are responsive CSS  VV */
+/* Responsive CSS */
+
 /* Mobile */
-@media screen and (max-width:540px) {
-	#galley1, #galley2, #galley3, #galley4 {
-		flex-basis: 100%;
-		max-width: 18em;
-	}
-	header {
-		text-align: center;
-	}
-	header > h1 {
-	padding-right: 0em;
-	}
-	a:link{ /* change the link to column */
-		width: 100%;
-		padding: 0em;
-		margin-left: 0em;
-	}
+@media screen and (max-width: 600px) {
+    #galley1, #galley2, #galley3, #galley4 {
+        flex-basis: 100%;
+        max-width: 100%; /* Take full width on mobile */
+        margin: 10px 0; /* Add some vertical margin */
+    }
+
+    header {
+        text-align: center;
+    }
+
+    header > h1 {
+        padding-right: 0;
+    }
+
+    a:link {
+        width: 100%;
+        padding: 10px 0; /* Add vertical padding */
+        margin: 10px 0; /* Add vertical margin */
+        display: block; /* Make links block elements for full width */
+    }
+
+    .Content{
+        width: 95%;
+    }
+    .skillicon-container {
+        display: inline-flex; /* Changed to inline-flex */
+        flex-direction: row; /* Icon and text in a row */
+        align-items: center; /* Vertically align items */
+        width: auto; /* Width fits content */
+        margin-bottom: 10px;
+        padding: 5px 10px; /* Adjusted padding */
+        border-radius: 5px; /* Optional: rounded corners */
+        box-sizing: border-box; /* Prevent padding from adding to width */
+    }
+
+    .skillicon-container img {
+        height: 40px; /* Smaller icon on mobile */
+        width: 40px;
+        margin-right: 5px; /* Add right margin for spacing */
+        margin-bottom: 0; /* Remove bottom margin */
+    }
+
+    .skillicon-container span {
+        opacity: 1; /* Text always visible */
+        font-size: 1em; /* Adjust text size for mobile */
+        padding: 0; /* Remove extra padding */
+    }
 }
 
 /* Tablet */
-@media screen and (min-width:541px) and (max-width:800px) {
-	#galley1, #galley2, #galley3, #galley4 {
-		flex-basis: 50%;
-		max-width: 18em;
-	}
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+    #galley1, #galley2, #galley3, #galley4 {
+        flex-basis: 50%;
+        max-width: 48%; /* Adjust for tablet spacing */
+        margin: 1%;
+    }
+    .Content{
+        width: 85%;
+    }
+	.skillicon-container {
+        display: flex; /* Display as flex on tablet */
+        align-items: center; /* Align items horizontally */
+        width: auto;
+        margin-bottom: 10px;
+        padding: 10px;
+    }
+
+    .skillicon-container img {
+        height: 60px; /* Smaller icon on tablet */
+        width: 60px;
+    }
+
+    .skillicon-container span {
+        opacity: 1; /* Text always visible */
+    }
 }
 
-/* Desktop */
-@media screen and (min-width:801px) {
-	#galley1, #galley2, #galley3, #galley4 {
-		flex-basis: 25%;
-		max-width: 17em;
-	}
+/* Desktop (unchanged) */
+@media screen and (min-width: 1025px) {
+    #galley1, #galley2, #galley3, #galley4 {
+        flex-basis: 25%;
+        max-width: 23%; /* Adjust for desktop spacing */
+        margin: 1%;
+    }
+    .Content{
+        width: 75%;
+    }
 }
